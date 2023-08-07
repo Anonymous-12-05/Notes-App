@@ -4,7 +4,7 @@ import Header from './components/Header';
 import NotesListPage from './pages/NotesListPage';
 import NotePage from './pages/NotePage';
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Route,
   Routes
 } from "react-router-dom";
@@ -12,12 +12,14 @@ import {
 function App() {
   return (
     <Router>
-    <div className="App">
+    <div className='container dark'>
+      <div className="App  ">
       <Header/>
       <Routes>
       <Route path="/" exact element={<NotesListPage/>}/>
       <Route path="/note/:id" element={<NotePage/>}></Route>
       </Routes>
+      </div>
     </div>
     </Router>
   );
